@@ -6,27 +6,27 @@ let fruit =[{
     img:"https://i.postimg.cc/RhkwP1fh/Watch-Dogs-Legion.png"
   },
   {
-    name:"Call Of Duty",
-    category:"RPG",
+    name:"COD: Modern Warfare",
+    category:"FPS",
     price:"999.99",
     img:"https://i.postimg.cc/9Mx4kP3V/COD-modern-warfare.webp"
 
   },
   {
-    name:"Watch Dogs: Legion",
-    category:"RPG",
-    price:"999.99",
-    img:"https://i.postimg.cc/9Mx4kP3V/COD-modern-warfare.webp"
+    name:"PUBG",
+    category:"Battle Royale",
+    price:"0.00",
+    img:"https://i.postimg.cc/MpnwrZjr/PUBG.jpg"
   },  {
-    name:"Watch Dogs: Legion",
+    name:"Cyberpunk 2077",
     category:"RPG",
     price:"999.99",
-    img:"https://i.postimg.cc/9Mx4kP3V/COD-modern-warfare.webp"
+    img:"https://i.postimg.cc/kXkYq7pH/Cyberpunk2077.png"
   },  {
-    name:"Watch Dogs: Legion",
-    category:"RPG",
+    name:"Forza Horizon 5",
+    category:"Racing",
     price:"999.99",
-    img:"https://i.postimg.cc/9Mx4kP3V/COD-modern-warfare.webp"
+    img:"https://i.postimg.cc/wxnnT5tF/Forza-Horizon-5.jpg"
   },
   ];
 
@@ -84,8 +84,11 @@ let cart = JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.ge
               <input type="text" id="update-input-price-${position}" value="${fruit.price} "/>
               <input type="text" id="update-input-img-${position}" value="${fruit.img} "/>
               <select name="catergory" id="update-input-catergory-${position}">
-              <option value="fruit">fruit</option>
-              <option value="vegetable">vegetable</option>
+              <option value="RPG">RPG</option>
+              <option value="Battle Royale">Battle Royale</option>
+              <option value="MOBA">MOBA</option>
+              <option value="FPS">FPS</option>
+              <option value="Racing">Racing</option>
               </select>
             </div>
             <div class="modal-footer">
@@ -179,20 +182,24 @@ function addToCart(position){
 }
 
 
+// SORT BY CATEGORY
+// function sortCategory() {
+//   let category = document.querySelector("#sortCategory").value;
 
+//   if (category == "All") {
+//     return readProducts(products);
+//   }
 
-// js 
-// function priceSort() {
-//   let direction = document.querySelector("#priceSort").value;
+//   let foundProducts = products.filter((product) => {
+//     return product.category == category;
+//   });
 
-//   let sortedProducts = products.sort((a, b) => a.price - b.price);
-
-//   console.log(sortedProducts);
-
-//   if (direction == "descending") sortedProducts.reverse();
-//   readProducts(sortedProducts);
+//   readProducts(foundProducts);
+//   console.log(foundProducts);
 // }
 
+
+// SORT BY NAME
 
 // function sortName() {
 //   let direction = document.querySelector("#sortName").value;
@@ -209,5 +216,18 @@ function addToCart(position){
 //   if (direction == "descending") sortedProducts.reverse();
 //   console.log(sortedProducts);
 //   readProducts(products);
+// }
+
+// SORT BY PRICE
+
+// function sortPrice() {
+//   let direction = document.querySelector("#sortPrice").value;
+
+//   let sortedProducts = products.sort((a, b) => a.price - b.price);
+
+//   console.log(sortedProducts);
+
+//   if (direction == "descending") sortedProducts.reverse();
+//   readProducts(sortedProducts);
 // }
 

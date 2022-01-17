@@ -12,7 +12,7 @@ function readCart(cart) {
   <div class="row g-0">
     <div class="col-md-4">
       <img src="${fruit.img}" class="img-fluid rounded-start" alt="...">
-    </div>
+    </div>F1uffyDe5troyer/POS-project 
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${fruit.name}</h5>
